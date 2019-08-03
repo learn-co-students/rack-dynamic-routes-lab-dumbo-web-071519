@@ -13,10 +13,7 @@ class Application
     end
 
     resp.finish
-
   end
-
-end
 
   def exist?(item_name, resp)
     if Item.all_names.include?(item_name)
@@ -27,3 +24,5 @@ end
       resp.status = 400
     end
   end
+
+end
