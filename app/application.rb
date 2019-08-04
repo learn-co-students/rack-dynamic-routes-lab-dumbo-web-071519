@@ -3,7 +3,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     @@items = [Item.new("Figs",3.42),Item.new("Pears",0.99)]
-    resp.write @@items
+    #resp.write @@items
 
     if req.path.match(/items/)
         item_name = req.path.split("/items/").last 
